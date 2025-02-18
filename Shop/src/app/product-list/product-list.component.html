@@ -1,14 +1,36 @@
 <h2>Products</h2>
 
 <div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
 
-    <h3>
-        <a [title]="product.name + ' details'">
-          {{ product.name }}
-        </a>
-    </h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description}}
+  </p>
 
-    <p *ngIf="product.description">
-        Description: {{ product.description }}
-    </p>
-  </div>
+  <p *ngIf="product.stock">
+    Stock: {{ product.stock }}
+  </p>
+
+  <p *ngIf="product.stock < 4">
+    Stock por debajo de 4: {{ product.stock }}
+  </p>
+
+  <p *ngIf="product.stock ==0">
+    
+  </p>
+
+
+  <p *ngIf="product.caracteristicas">
+    Caracteristicas: {{ product.caracteristicas }}
+  </p>
+
+  <p *ngIf="product.garantia">
+    Periodo: {{ product.garantia.periodo }}
+    Tipo: {{ product.garantia.tipo }}
+
+
+</div>

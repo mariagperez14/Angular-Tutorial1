@@ -5,6 +5,7 @@ import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
+  imports: [NgFor, NgIf],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
